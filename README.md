@@ -1,6 +1,6 @@
 # Object.clone() | Cloneable
 &emsp;&emsp;Object 类的 clone 是 protected 的，不能直接调用，可以被子类调用。只有实现了 Cloneable 接口，才可以在该类的实例上调用 clone() 方法，
-否则会抛出 CloneNotSupportException。
+否则会抛出 CloneNotSupportedException。
 ``` java
 package java.lang;
 public interface Cloneable {
@@ -25,3 +25,7 @@ protected native Object clone() throws CloneNotSupportedException;
 深拷贝相比于浅拷贝速度较慢并且花销较大。
 
 > &emsp;简而言之，深拷贝把要复制的对象所引用的对象都复制了一遍。
+
+3. 浅拷贝与深拷贝的区别：
++ 深拷贝和浅拷贝之间的区别在于是否复制了子对象。
++ 深拷贝与浅拷贝问题中，会发生深拷贝的有 java 中的 8 中基本类型以及他们的封装类型，另外还有 String 类型。其余的都是浅拷贝。
