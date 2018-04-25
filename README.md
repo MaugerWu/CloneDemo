@@ -1,4 +1,15 @@
 # Object.clone() | Cloneable
+&emsp;&emsp;Object 类的 clone 是 protected 的，不能直接调用，可以被子类调用。只有实现了 Cloneable 接口，才可以在该类的实例上调用 clone() 方法，
+否则会抛出 CloneNotSupportException。
+``` java
+package java.lang;
+public interface Cloneable {
+}
+```
+``` java
+protected native Object clone() throws CloneNotSupportedException;
+```
+
 1. [引用拷贝](https://github.com/MaugerWu/CloneDemo/blob/master/Copy.java)：
 > &emsp;&emsp;创建一个指向对象的引用变量的拷贝。
 
